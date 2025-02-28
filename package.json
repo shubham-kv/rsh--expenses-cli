@@ -1,0 +1,22 @@
+{
+  "name": "expenses-cli",
+  "description": "Expenses CLI tool with NodeJS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "expenses": "./index.js"
+  },
+  "keywords": [
+    "cli",
+    "expenses",
+    "nodejs"
+  ],
+  "author": "Shubham Vishwakarma",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^13.1.0"
+  }
+}
