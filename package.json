@@ -1,13 +1,13 @@
 {
   "name": "expenses-cli",
-  "description": "Expenses CLI tool with NodeJS",
+  "description": "Cli tool to manage your expenses.",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./package/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "expenses": "./index.js"
+    "expenses": "./package/index.js"
   },
   "keywords": [
     "cli",
