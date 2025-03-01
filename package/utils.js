@@ -1,3 +1,12 @@
+let nanoid;
+
+const generateNewId = async () => {
+  if (!nanoid) {
+    nanoid = await import("nanoid");
+  }
+  return nanoid.nanoid(8);
+};
+
 const validateExpenseInput = (params) => {
   const { name, amount, description } = params;
 
@@ -23,5 +32,6 @@ const validateExpenseInput = (params) => {
 };
 
 module.exports = {
+  generateNewId,
   validateExpenseInput,
 };
