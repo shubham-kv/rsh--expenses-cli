@@ -11,17 +11,22 @@ const addExpense = async (name, options) => {
   fs.readFile(expensesDataPath, "ascii", (err, data) => {
     if (err) throw err;
     const expenses = data ? JSON.parse(data.toString(), null, 2) : [];
+    const now = new Date();
 
-    expenses.push({
+    const newExpense = {
       id: expenses.length + 1,
       name,
       amount,
       description,
-    });
+      createdAt: now,
+      updatedAt: now,
+    };
+
+    expenses.push(newExpense);
 
     fs.writeFile(expensesDataPath, JSON.stringify(expenses, null, 2), (err) => {
       if (err) throw err;
-      console.log("Expense added successfully!");
+      console.log(`Expense added successfully, id ${newExpense.id}.`);
     });
   });
 };
