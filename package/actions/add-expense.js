@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { expensesDataPath } = require("./constants");
+const { expensesDataPath } = require("../constants");
 
 const addExpense = async (name, options) => {
   const { amount, description } = options;

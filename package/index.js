@@ -3,7 +3,7 @@
 const { Command } = require("commander");
 const { name, description, version } = require("../package.json");
 
-const { addExpense } = require("./add-expense");
+const { addExpense } = require("./actions/index");
 
 const program = new Command();
 
