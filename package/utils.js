@@ -10,6 +10,12 @@ const generateNewId = async () => {
 const validateExpenseInput = (params) => {
   const { name, amount, description } = params;
 
+  if (!name && !amount && !description) {
+    console.error(`<====== FAILURE ======>`);
+    console.error(`Invalid options, at-least one option required.\n`);
+    return false;
+  }
+
   if (name !== undefined && name === "") {
     console.error(`<====== FAILURE ======>`);
     console.error(`Invalid name, cannot be empty.\n`);
